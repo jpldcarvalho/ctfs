@@ -1,0 +1,928 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "deposit",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "transfer",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "approve(address,uint256)": "095ea7b3",
+    "balanceOf(address)": "70a08231",
+    "deposit()": "d0e30db0",
+    "transfer(address,uint256)": "a9059cbb",
+    "transferFrom(address,address,uint256)": "23b872dd"
+  },
+  "ast": {
+    "absolutePath": "contracts/Setup.sol",
+    "id": 334,
+    "exportedSymbols": {
+      "ERC20Like": [
+        33
+      ],
+      "MasterChefHelper": [
+        270
+      ],
+      "MasterChefLike": [
+        47
+      ],
+      "Setup": [
+        333
+      ],
+      "UniswapV2PairLike": [
+        389
+      ],
+      "UniswapV2RouterLike": [
+        378
+      ],
+      "WETH9": [
+        279
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "40:588:1",
+    "nodes": [
+      {
+        "id": 272,
+        "nodeType": "PragmaDirective",
+        "src": "40:23:1",
+        "literals": [
+          "solidity",
+          "0.8",
+          ".16"
+        ]
+      },
+      {
+        "id": 273,
+        "nodeType": "ImportDirective",
+        "src": "65:32:1",
+        "absolutePath": "contracts/MasterChefHelper.sol",
+        "file": "./MasterChefHelper.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 334,
+        "sourceUnit": 271,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 279,
+        "nodeType": "ContractDefinition",
+        "src": "99:73:1",
+        "nodes": [
+          {
+            "id": 278,
+            "nodeType": "FunctionDefinition",
+            "src": "134:36:1",
+            "functionSelector": "d0e30db0",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nameLocation": "143:7:1",
+            "parameters": {
+              "id": 276,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "150:2:1"
+            },
+            "returnParameters": {
+              "id": 277,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "169:0:1"
+            },
+            "scope": 279,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 274,
+              "name": "ERC20Like",
+              "nameLocations": [
+                "118:9:1"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 33,
+              "src": "118:9:1"
+            },
+            "id": 275,
+            "nodeType": "InheritanceSpecifier",
+            "src": "118:9:1"
+          }
+        ],
+        "canonicalName": "WETH9",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          279,
+          33
+        ],
+        "name": "WETH9",
+        "nameLocation": "109:5:1",
+        "scope": 334,
+        "usedErrors": []
+      },
+      {
+        "id": 333,
+        "nodeType": "ContractDefinition",
+        "src": "174:454:1",
+        "nodes": [
+          {
+            "id": 285,
+            "nodeType": "VariableDeclaration",
+            "src": "200:78:1",
+            "constant": true,
+            "functionSelector": "3fc8cef3",
+            "mutability": "constant",
+            "name": "weth",
+            "nameLocation": "222:4:1",
+            "scope": 333,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_WETH9_$279",
+              "typeString": "contract WETH9"
+            },
+            "typeName": {
+              "id": 281,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 280,
+                "name": "WETH9",
+                "nameLocations": [
+                  "200:5:1"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 279,
+                "src": "200:5:1"
+              },
+              "referencedDeclaration": 279,
+              "src": "200:5:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_WETH9_$279",
+                "typeString": "contract WETH9"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "hexValue": "307843303261614133396232323346453844304130653543344632376541443930383343373536436332",
+                  "id": 283,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "235:42:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "value": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                ],
+                "id": 282,
+                "name": "WETH9",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 279,
+                "src": "229:5:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_contract$_WETH9_$279_$",
+                  "typeString": "type(contract WETH9)"
+                }
+              },
+              "id": 284,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "typeConversion",
+              "lValueRequested": false,
+              "nameLocations": [],
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "229:49:1",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_WETH9_$279",
+                "typeString": "contract WETH9"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 288,
+            "nodeType": "VariableDeclaration",
+            "src": "284:42:1",
+            "constant": false,
+            "functionSelector": "fdcc2a6e",
+            "mutability": "immutable",
+            "name": "mcHelper",
+            "nameLocation": "318:8:1",
+            "scope": 333,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_MasterChefHelper_$270",
+              "typeString": "contract MasterChefHelper"
+            },
+            "typeName": {
+              "id": 287,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 286,
+                "name": "MasterChefHelper",
+                "nameLocations": [
+                  "284:16:1"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 270,
+                "src": "284:16:1"
+              },
+              "referencedDeclaration": 270,
+              "src": "284:16:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_MasterChefHelper_$270",
+                "typeString": "contract MasterChefHelper"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 316,
+            "nodeType": "FunctionDefinition",
+            "src": "333:175:1",
+            "body": {
+              "id": 315,
+              "nodeType": "Block",
+              "src": "355:153:1",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 296,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 291,
+                      "name": "mcHelper",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 288,
+                      "src": "365:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_MasterChefHelper_$270",
+                        "typeString": "contract MasterChefHelper"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 294,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "NewExpression",
+                        "src": "376:20:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_MasterChefHelper_$270_$",
+                          "typeString": "function () returns (contract MasterChefHelper)"
+                        },
+                        "typeName": {
+                          "id": 293,
+                          "nodeType": "UserDefinedTypeName",
+                          "pathNode": {
+                            "id": 292,
+                            "name": "MasterChefHelper",
+                            "nameLocations": [
+                              "380:16:1"
+                            ],
+                            "nodeType": "IdentifierPath",
+                            "referencedDeclaration": 270,
+                            "src": "380:16:1"
+                          },
+                          "referencedDeclaration": 270,
+                          "src": "380:16:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_MasterChefHelper_$270",
+                            "typeString": "contract MasterChefHelper"
+                          }
+                        }
+                      },
+                      "id": 295,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "376:22:1",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_MasterChefHelper_$270",
+                        "typeString": "contract MasterChefHelper"
+                      }
+                    },
+                    "src": "365:33:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_MasterChefHelper_$270",
+                      "typeString": "contract MasterChefHelper"
+                    }
+                  },
+                  "id": 297,
+                  "nodeType": "ExpressionStatement",
+                  "src": "365:33:1"
+                },
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "expression": {
+                          "id": 298,
+                          "name": "weth",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 285,
+                          "src": "408:4:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_WETH9_$279",
+                            "typeString": "contract WETH9"
+                          }
+                        },
+                        "id": 300,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "413:7:1",
+                        "memberName": "deposit",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 278,
+                        "src": "408:12:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_external_payable$__$returns$__$",
+                          "typeString": "function () payable external"
+                        }
+                      },
+                      "id": 302,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "names": [
+                        "value"
+                      ],
+                      "nodeType": "FunctionCallOptions",
+                      "options": [
+                        {
+                          "hexValue": "3130",
+                          "id": 301,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "428:8:1",
+                          "subdenomination": "ether",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_10000000000000000000_by_1",
+                            "typeString": "int_const 10000000000000000000"
+                          },
+                          "value": "10"
+                        }
+                      ],
+                      "src": "408:29:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_payable$__$returns$__$value",
+                        "typeString": "function () payable external"
+                      }
+                    },
+                    "id": 303,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "408:31:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 304,
+                  "nodeType": "ExpressionStatement",
+                  "src": "408:31:1"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 310,
+                            "name": "mcHelper",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 288,
+                            "src": "471:8:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_MasterChefHelper_$270",
+                              "typeString": "contract MasterChefHelper"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_contract$_MasterChefHelper_$270",
+                              "typeString": "contract MasterChefHelper"
+                            }
+                          ],
+                          "id": 309,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "463:7:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": {
+                            "id": 308,
+                            "name": "address",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "463:7:1",
+                            "typeDescriptions": {}
+                          }
+                        },
+                        "id": 311,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "463:17:1",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "hexValue": "3130",
+                        "id": 312,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "482:8:1",
+                        "subdenomination": "ether",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_10000000000000000000_by_1",
+                          "typeString": "int_const 10000000000000000000"
+                        },
+                        "value": "10"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_rational_10000000000000000000_by_1",
+                          "typeString": "int_const 10000000000000000000"
+                        }
+                      ],
+                      "expression": {
+                        "id": 305,
+                        "name": "weth",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 285,
+                        "src": "449:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_WETH9_$279",
+                          "typeString": "contract WETH9"
+                        }
+                      },
+                      "id": 307,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "454:8:1",
+                      "memberName": "transfer",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 18,
+                      "src": "449:13:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$__$",
+                        "typeString": "function (address,uint256) external"
+                      }
+                    },
+                    "id": 313,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "449:42:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 314,
+                  "nodeType": "ExpressionStatement",
+                  "src": "449:42:1"
+                }
+              ]
+            },
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "parameters": {
+              "id": 289,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "344:2:1"
+            },
+            "returnParameters": {
+              "id": 290,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "355:0:1"
+            },
+            "scope": 333,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 332,
+            "nodeType": "FunctionDefinition",
+            "src": "514:111:1",
+            "body": {
+              "id": 331,
+              "nodeType": "Block",
+              "src": "563:62:1",
+              "statements": [
+                {
+                  "expression": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 329,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "arguments": [
+                        {
+                          "arguments": [
+                            {
+                              "id": 325,
+                              "name": "mcHelper",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 288,
+                              "src": "603:8:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_MasterChefHelper_$270",
+                                "typeString": "contract MasterChefHelper"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_contract$_MasterChefHelper_$270",
+                                "typeString": "contract MasterChefHelper"
+                              }
+                            ],
+                            "id": 324,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "595:7:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": {
+                              "id": 323,
+                              "name": "address",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "595:7:1",
+                              "typeDescriptions": {}
+                            }
+                          },
+                          "id": 326,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "595:17:1",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "expression": {
+                          "id": 321,
+                          "name": "weth",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 285,
+                          "src": "580:4:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_WETH9_$279",
+                            "typeString": "contract WETH9"
+                          }
+                        },
+                        "id": 322,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "585:9:1",
+                        "memberName": "balanceOf",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 32,
+                        "src": "580:14:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
+                          "typeString": "function (address) view external returns (uint256)"
+                        }
+                      },
+                      "id": 327,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "580:33:1",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "hexValue": "30",
+                      "id": 328,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "617:1:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "580:38:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 320,
+                  "id": 330,
+                  "nodeType": "Return",
+                  "src": "573:45:1"
+                }
+              ]
+            },
+            "functionSelector": "64d98f6e",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isSolved",
+            "nameLocation": "523:8:1",
+            "parameters": {
+              "id": 317,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "531:2:1"
+            },
+            "returnParameters": {
+              "id": 320,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 319,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 332,
+                  "src": "557:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 318,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "557:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "556:6:1"
+            },
+            "scope": 333,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Setup",
+        "contractDependencies": [
+          270
+        ],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          333
+        ],
+        "name": "Setup",
+        "nameLocation": "183:5:1",
+        "scope": 334,
+        "usedErrors": []
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 1
+}

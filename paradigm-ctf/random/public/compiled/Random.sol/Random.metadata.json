@@ -1,0 +1,72 @@
+{
+  "compiler": {
+    "version": "0.8.15+commit.e14f2714"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "guess",
+            "type": "uint256"
+          }
+        ],
+        "name": "solve",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "solved",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      }
+    ],
+    "devdoc": {
+      "kind": "dev",
+      "methods": {},
+      "version": 1
+    },
+    "userdoc": {
+      "kind": "user",
+      "methods": {},
+      "version": 1
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "contracts/Random.sol": "Random"
+    },
+    "evmVersion": "london",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": []
+  },
+  "sources": {
+    "contracts/Random.sol": {
+      "keccak256": "0x26e9395f291f8213bc59649a06808fb4a327d3dd90101b49316ae448a1da7c46",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://e5d9fcec438289a7b0561a5042eed154ffcea82dfc6b41137663e3cc3a7e1196",
+        "dweb:/ipfs/QmNqySwGBLEpq3oCCgsxPVddTi1VB63zfVC8wCU3RoFrQ6"
+      ]
+    }
+  },
+  "version": 1
+}
